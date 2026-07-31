@@ -1,7 +1,7 @@
 // Thin wrapper around fetch for the backend API.
 // Vite dev server proxies /api → http://localhost:5000 (see vite.config.js).
 
-const API_BASE = import.meta.env.VITE_API_URL || "/api";
+const API_BASE = import.meta.env.VITE_API_URL || "https://portfolio-dhcb.onrender.com/api";
 
 /* Admin token persistence */
 const TOKEN_KEY = "rp_admin_token";

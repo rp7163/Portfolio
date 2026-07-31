@@ -26,7 +26,7 @@ const pingBackend = async () => {
   try {
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), HEALTH_CHECK_TIMEOUT);
-    const res = await fetch("/api/health", {
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/health`, {
       signal: controller.signal,
       cache: "no-store",
     });
