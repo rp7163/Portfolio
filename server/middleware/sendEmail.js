@@ -55,8 +55,11 @@ ${message}
   };
 
   await transporter.verify();
-  console.log("SMTP ready");
+  console.log("SMTP connection successful");
+  
   await transporter.sendMail(mailOptions);
+  console.log("Email sent successfully");
+  
   return { skipped: false };
 };
 
