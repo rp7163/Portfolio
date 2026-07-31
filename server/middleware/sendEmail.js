@@ -15,7 +15,12 @@ const getTransporter = () => {
 
   cachedTransporter = nodemailer.createTransport({
     service: "gmail",
-    auth: { user: EMAIL_USER, pass: EMAIL_PASS },
+    auth: { 
+      user: EMAIL_USER, 
+      pass: EMAIL_PASS 
+    },
+    connectionTimeout: 10000,
+    socketTimeout: 10000,
   });
   return cachedTransporter;
 };
@@ -49,6 +54,8 @@ ${message}
     `,
   };
 
+  await transporter.verify();
+  console.log("SMTP ready");
   await transporter.sendMail(mailOptions);
   return { skipped: false };
 };

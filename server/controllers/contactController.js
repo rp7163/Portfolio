@@ -18,6 +18,10 @@ export const createContactMessage = async (req, res) => {
       await sendContactEmail({ name, email, subject, message });
     } catch (emailErr) {
       console.error("Email send failed:", emailErr.message);
+      return res.status(500).json({
+        success: false,
+        message: "Message saved but email delivery failed"
+      });
     }
 
     res.status(201).json({
