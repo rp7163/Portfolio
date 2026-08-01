@@ -1,145 +1,125 @@
-# Rudra Patel — Portfolio (MERN Stack)
+````md
+# 🌐 Personal Portfolio
 
-A full-stack personal portfolio website for SDE / SWE / Web Developer fresher roles.
+A responsive full-stack portfolio website built with React, Node.js, Express.js, and MongoDB to showcase my projects, skills, achievements, and experience. It features visitor analytics, a secure admin dashboard, and a contact system.
 
-## 🧱 Tech Stack
+[🌍 Live Website](https://rudra-portfolio-nu.vercel.app) • [📂 GitHub Repository](https://github.com/rp7163/Portfolio)
 
-- **Frontend:** React (Vite), Lucide Icons, react-icons (brand logos), react-type-animation
-- **Backend:** Node.js, Express.js
-- **Database:** MongoDB (Mongoose)
-- **Email:** Nodemailer (Gmail SMTP) — for both contact form and hire popup
-- **Styling:** Custom CSS with CSS variables for theming (light + dark)
+---
 
 ## ✨ Features
 
-1. **Hero with photo** — 3D mouse-tilt + glow halo + "Let's build together" status pill
-2. **Typed animation** — name cycles through 4 role titles on page load
-3. **5-line code card** — compact developer profile in JS syntax
-4. **"I'm Hiring" popup** — recruiters fill a 6-field form (name, email, company, role, positions, salary) and you get a formatted email instantly
-5. **Silent viewer tracking** — every visit is recorded in MongoDB (IP is hashed, not stored in cleartext) so you can see your traffic
-6. **Coding profile cards** — cursor-tracking brand-color glow for each platform
-7. **Light + dark themes** with theme toggle
-8. **Contact form** with validation, rate-limiting, and email forwarding
+- Responsive portfolio website
+- Project showcase
+- Skills & experience sections
+- Resume download
+- Contact form with email integration
+- Visitor analytics
+- Admin dashboard
+- RESTful backend APIs
+- Modern and responsive UI
+- MongoDB database integration
 
-## ❓ Do I need the `.env` file?
+---
 
-| What you want | Need `.env`? | Need MongoDB? | Need Gmail? |
-| --- | --- | --- | --- |
-| Just view the portfolio in the browser | ❌ No | ❌ No | ❌ No |
-| Use the contact form (DB only) | ✅ Yes | ✅ Yes | ❌ No |
-| Use the contact form (email forwarding) | ✅ Yes | ⚠️ Optional | ✅ Yes |
-| Use the "I'm Hiring" popup | ✅ Yes | ⚠️ Optional | ✅ Yes |
-| Track page views (silent) | ✅ Yes | ✅ Yes | ❌ No |
+## 🛠️ Tech Stack
 
-### What is `.env`?
+| Category | Technologies |
+|----------|--------------|
+| Frontend | React, Vite, Tailwind CSS, JavaScript |
+| Backend | Node.js, Express.js |
+| Database | MongoDB Atlas |
+| Deployment | Vercel, Render |
 
-`.env` (environment file) holds **secrets and config** that vary per environment. Putting real passwords in code is dangerous — if you push to GitHub, bots will scrape them within minutes. The `.env` file is in `.gitignore` so it never gets committed.
+---
 
-For this portfolio, the `.env` contains:
-- `MONGO_URI` — database connection string
-- `EMAIL_USER` / `EMAIL_PASS` — Gmail + App Password
-- `EMAIL_TO` — where to forward messages
-- `IP_SALT` — salt for hashing viewer IPs (GDPR-friendly)
+## 📂 Project Structure
 
-## 🚀 Quick Start (full stack)
+```text
+Portfolio/
+├── client/
+├── server/
+├── README.md
+└── .gitignore
+```
 
-```powershell
-cd portfolio-mern
-npm run install-all
-Copy-Item server\.env.example server\.env
-notepad server\.env        # fill in Mongo URI + Gmail App Password
+---
+
+## ⚙️ Installation
+
+```bash
+git clone https://github.com/rp7163/Portfolio.git
+cd Portfolio
+```
+
+Install dependencies:
+
+```bash
+cd client
+npm install
+
+cd ../server
+npm install
+```
+
+Create a `.env` file inside the `server` folder:
+
+```env
+PORT=5000
+MONGODB_URI=your_mongodb_connection_string
+CLIENT_URL=http://localhost:5173
+ADMIN_SECRET=your_admin_secret
+EMAIL_USER=your_email
+EMAIL_PASS=your_email_password
+```
+
+Run the project:
+
+```bash
+# Backend
+cd server
+npm run dev
+
+# Frontend
+cd client
 npm run dev
 ```
 
-| Service | URL | Port |
-| --- | --- | --- |
-| React frontend | http://localhost:5173 | 5173 |
-| Express API | http://localhost:5000/api/... | 5000 |
+Open **http://localhost:5173**
 
-## 🔌 API Endpoints
+---
 
-| Method | Path | Purpose |
-| --- | --- | --- |
-| `POST` | `/api/contact` | Submit the contact form (saves + emails) |
-| `GET`  | `/api/profile` | Get your profile (if stored in DB) |
-| `PUT`  | `/api/profile` | Update your profile |
-| `POST` | `/api/hire` | Submit a hiring inquiry (saves + emails) |
-| `POST` | `/api/views` | Record a page view (silent, IP hashed) |
-| `GET`  | `/api/views/stats` | Get view counts (total, 24h, 7d) |
-| `POST` | `/api/admin/login` | Admin login (returns bearer token) |
-| `GET`  | `/api/admin/overview` | Dashboard overview stats |
-| `GET`  | `/api/admin/views` | Paginated list of all views |
-| `GET`  | `/api/admin/messages` | List contact form messages |
-| `GET`  | `/api/admin/hires` | List hire inquiries |
-| `GET`  | `/api/health` | Health check |
+## 📊 Visitor Analytics
 
-## 📁 Project Structure
+Tracks portfolio visits and displays statistics through a protected admin dashboard to help monitor website traffic.
 
-```
-portfolio-mern/
-├── client/
-│   ├── public/             # profile.png, favicon
-│   ├── src/
-│   │   ├── components/     # Navbar, Footer, HireModal, BrandIcons
-│   │   ├── sections/       # Hero, About, Skills, Projects, Education, Achievements, Contact
-│   │   ├── context/        # Theme context
-│   │   ├── data/           # portfolioData.js
-│   │   ├── styles/         # index.css
-│   │   ├── utils/          # api.js, tracker.js
-│   │   ├── App.jsx
-│   │   └── main.jsx
-│   └── package.json
-├── server/
-│   ├── config/
-│   ├── controllers/        # contact, profile, hire, view
-│   ├── models/             # ContactMessage, Profile, HireInquiry, PageView
-│   ├── routes/             # contactRoutes, profileRoutes, hireRoutes, viewRoutes
-│   ├── middleware/         # rateLimiter, sendEmail
-│   ├── server.js
-│   ├── .env.example
-│   └── package.json
-└── package.json
-```
+---
 
-## 🛠 Customising Content
+## 📧 Contact
 
-All portfolio content lives in **`client/src/data/portfolioData.js`**.
+Visitors can send messages directly from the portfolio through the integrated backend email service.
 
+---
 
-## 🔐 Hidden Admin Dashboard
+## 📱 Responsive Design
 
-Your portfolio has a **hidden admin dashboard** that no one can find by clicking around the public site. Access it at:
+Optimized for desktop, tablet, and mobile devices.
 
-```
-http://localhost:5173/#admin
-```
+---
 
-(When deployed, use your domain + `/#admin`.)
+## 👨‍💻 Author
 
-**First-time setup:**
-1. Open `server/.env`
-2. Add a line: `ADMIN_SECRET=any-long-string-you-want`
-3. Restart the server
-4. Visit `http://localhost:5173/#admin`
-5. Type your secret to unlock
+**Rudra Patel**
 
-**What the dashboard shows:**
-- 📊 Total / 24h / 7d / 30d views (with unique-visitor counts)
-- 📈 Bar chart of views over the last 30 days
-- 🌍 Top countries, browsers, referrers
-- 📩 All contact form messages (with read/unread tracking + Reply button)
-- 💼 All "I'm Hiring" inquiries (with Reply button)
-- 👥 Full list of recent visitors with browser / UA / IP-hash
-- 🗑️ Delete or mark-read for messages
-- 🔄 Auto-refreshes every 30 seconds
+🌐 **Portfolio:** [Live Website](https://rudra-portfolio-nu.vercel.app)
 
-**Security:**
-- Only accessible via the `/#admin` URL (no link on the public site)
-- Protected by your `ADMIN_SECRET` password
-- Constant-time comparison (no timing attacks)
-- Bearer token auth (24h session in `sessionStorage`)
-- Wrong password = generic "Invalid secret" message (no info leak)
+💼 **LinkedIn:** [Rudra Patel](https://www.linkedin.com/in/rudra-patel-pdeu/)
 
-**Privacy:**
-- All IPs are stored as SHA-256 hashes (not cleartext)
-- The dashboard is invisible to anyone who doesn't know the URL
+📂 **GitHub:** [rp7163](https://github.com/rp7163)
+
+📧 **Email:** [patelrudrad6919@gmail.com](mailto:patelrudrad6919@gmail.com)
+
+---
+
+⭐ If you found this project useful, consider giving it a star on GitHub.
+````
