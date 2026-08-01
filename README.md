@@ -1,4 +1,3 @@
-````md
 # 🌐 Personal Portfolio
 
 A responsive full-stack portfolio website built with React, Node.js, Express.js, and MongoDB to showcase my projects, skills, achievements, and experience. It features visitor analytics, a secure admin dashboard, and a contact system.
@@ -122,4 +121,3 @@ Optimized for desktop, tablet, and mobile devices.
 ---
 
 ⭐ If you found this project useful, consider giving it a star on GitHub.
-````
