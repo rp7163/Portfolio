@@ -5,11 +5,11 @@ export const profile = {
   initials: "RP",
   title: "Software Engineer · Full-Stack Developer",
   tagline:
-    "Final Year B.Tech Computer Engineering student at PDEU, Gandhinagar — building thoughtful web apps, solving 1200+ DSA problems, and chasing clean code.",
+    "Final Year B.Tech Computer Engineering student at PDEU, Gandhinagar — building thoughtful web apps, solving 1300+ DSA problems, and chasing clean code.",
   location: "Ahmedabad, Gujarat, India",
   email: "23bcp401@sot.pdpu.ac.in",
   phone: "+91 7573092630",
-  resumeUrl: "https://drive.google.com/file/d/1Bw_YQ8SElO0IE5TFk84yPKfNtXyfIKfv/view?usp=drivesdk",
+  resumeUrl: "https://drive.google.com/file/d/1KAvg7iivVtgYOt_fiaojqVJLmoaQjgax/view?usp=drive_link",
   about: `I'm a final-year Computer Engineering student at Pandit Deendayal Energy University with a CGPA of 8.91. I love the intersection of competitive programming and product engineering — writing algorithms by day and building full-stack apps.
 
 My toolkit spans C++ for DSA, and the MERN stack for web development. I've built a Git-like VCS in Python, a logistics database system, and a complete online education platform with Node.js, Express.js, and MongoDB.
@@ -116,14 +116,14 @@ export const education = [
 export const achievements = [
   "Secured global rank 10 in a weekly competitive coding contest on Coding Ninjas.",
   "Specialist on Coding Ninjas with a peak rating of 1920.",
-  "2★ on CodeChef CP Contest (1560 curr) & DSA Contest rating of 1897 (max).",
+  "2★ on CodeChef CP Contest 1560 (curr) & DSA Contest rating of 1897 (max).",
   "Pupil on Codeforces with a current rating of 1223.",
-  "Solved 1200+ DSA problems across Codeforces, LeetCode, CodeChef, and Coding Ninjas.",
+  "Solved 1300+ DSA problems across Codeforces, LeetCode, CodeChef, and Coding Ninjas.",
   "Gold + Elite certificate for scoring 100% in the NPTEL course 'Understanding Incubation and Entrepreneurship' — top 1%.",
 ];
 
 export const codingProfiles = [
-  { platform: "LeetCode",         handle: "rp_7163",            rating: "1687", rank: "Top 15%",    url: "https://leetcode.com/u/rp_7163" },
+  { platform: "LeetCode",         handle: "rp_7163",            rating: "1682", rank: "Top 15%",    url: "https://leetcode.com/u/rp_7163" },
   { platform: "Coding ninjas",   handle: "rp7163",             rating: "1920", rank: "Specialist",  url: "https://www.naukri.com/code360/profile/4a7855bd-4f0b-455b-b273-712bd9a9ceb2" },
   { 
     platform: "CodeChef",         
@@ -140,8 +140,8 @@ export const codingProfiles = [
 ];
 
 export const stats = [
-  { label: "DSA Problems", value: "1200+" },
+  { label: "DSA Problems", value: "1300+" },
   { label: "CGPA",         value: "8.91" },
-  { label: "LeetCode",     value: "1687" },
+  { label: "LeetCode",     value: "1682" },
   { label: "Coding ninjas",      value: "1920" },
 ];
