@@ -11,7 +11,7 @@ const achievementMeta = [
   { icon: Crown,    color: "#a78bfa", label: "Specialist" },            // 2
   { icon: Star,     color: "#f59e0b", label: "CodeChef 1560 / 1897" },  // 3
   { icon: Swords,   color: "#60a5fa", label: "Pupil · Codeforces" },    // 4
-  { icon: Sparkles, color: "#34d399", label: "1200+ DSA Problems" },    // 5
+  { icon: Sparkles, color: "#34d399", label: "1300+ DSA Problems" },    // 5
   { icon: Award,    color: "#f472b6", label: "NPTEL Top 1%" },           // 6
 ];
 
