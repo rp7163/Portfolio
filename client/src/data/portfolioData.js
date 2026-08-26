@@ -17,7 +17,7 @@ My toolkit spans C++ for DSA, and the MERN stack for web development. I've built
 Currently looking for SDE / SWE / Web Developer fresher roles where I can grow as an engineer and ship meaningful products.`,
   socials: {
     github: "https://github.com/rp7163",
-    linkedin: "https://www.linkedin.com/in/rudra-patel-b0a83a293/",
+    linkedin: "https://www.linkedin.com/in/rudra-patel-pdeu/",
     leetcode: "https://leetcode.com/u/rp_7163",
     codeforces: "https://codeforces.com/profile/rp_7163",
     codechef: "https://www.codechef.com/users/soft_pearl_26",
