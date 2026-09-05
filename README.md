@@ -2,7 +2,7 @@
 
 A responsive full-stack portfolio website built with React, Node.js, Express.js, and MongoDB to showcase my projects, skills, achievements, and experience. It features visitor analytics, a secure admin dashboard, and a contact system.
 
-[🌍 Live Website](https://patelrudra.vercel.app) • [📂 GitHub Repository](https://github.com/rp7163/Portfolio)
+🌍 [Live Website](https://patelrudra.vercel.app) • 📂 [GitHub Repository](https://github.com/rp7163/Portfolio)
 
 ---
 
@@ -110,9 +110,9 @@ Optimized for desktop, tablet, and mobile devices.
 
 **Rudra Patel**
 
-🌐 **Portfolio:** [Live Website](https://patelrudra.vercel.app)
+🌐 **Portfolio:** [patelrudra.vercel.app](https://patelrudra.vercel.app)
 
-💼 **LinkedIn:** [Rudra Patel](https://www.linkedin.com/in/rudra-patel-pdeu/)
+💼 **LinkedIn:** [rudra-patel-pdeu](https://www.linkedin.com/in/rudra-patel-pdeu/)
 
 📂 **GitHub:** [rp7163](https://github.com/rp7163)
 
