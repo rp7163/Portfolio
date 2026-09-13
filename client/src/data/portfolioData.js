@@ -9,7 +9,7 @@ export const profile = {
   location: "Ahmedabad, Gujarat, India",
   email: "23bcp401@sot.pdpu.ac.in",
   phone: "+91 7573092630",
-  resumeUrl: "https://drive.google.com/file/d/1KAvg7iivVtgYOt_fiaojqVJLmoaQjgax/view?usp=drive_link",
+  resumeUrl: "https://drive.google.com/file/d/18TudqgjtCxbjsWvOJdRA7EHTlemjMmSK/view?usp=drive_link",
   about: `I'm a final-year Computer Engineering student at Pandit Deendayal Energy University with a CGPA of 8.91. I love the intersection of competitive programming and product engineering — writing algorithms by day and building full-stack apps.
 
 My toolkit spans C++ for DSA, and the MERN stack for web development. I've built a Git-like VCS in Python, a logistics database system, and a complete online education platform with Node.js, Express.js, and MongoDB.
